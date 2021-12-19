@@ -1,71 +1,17 @@
 ---
 ---
 
-
-/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
-
-/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
-*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
-    all: unset;
-    display: revert;
+html { 
+    display:flex;
+    background-color:#ededed;
 }
-
-/* Preferred box-sizing value */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+body { 
+    margin:auto;
+    font-family:arial;
 }
-
-/********* designed form elements ********/
-
-/* focusstate */
-input, 
-.select,
-textarea{
-   &:focus-within{
-    box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.3), 0 0.5em 2em 0 rgba(0, 0, 0, 0.15);
-  }
+h2 { 
+    font-size:1.5rem;
+    font-weight:bold;
+    margin-top:2em;
+    margin-bottom:0.5em;
 }
-
-input[type="checkbox"],
-input[type="radio"] {
-  display:inline-flex;
-  vertical-align:top;
-  border: solid 0.2rem rgb(100, 100, 100);
-  width: 5rem;
-  height: 5rem;
-  padding: 0.4rem;
-  background-clip: content-box;
-  
-  &:checked { 
-    background-color:hsl(88deg 50% 53%); 
-    &::before { content:"✔️"; font-size:2rem; margin:auto; }
-  }
-  &:disabled { filter:grayscale(1) opacity(0.3); }
-}
-
-input[type="radio"] { border-radius:50%; }
-
-.select{
-  position:relative;
-  width:fit-content;
-  padding:1rem;  padding-inline-end:3rem;
-  border: solid 0.2rem rgb(100, 100, 100); border-radius:1rem; background-color:white;
-  select{font-size:1.5em;}
-  &:focus-within{
-    &::after{transform:rotateX(180deg);}
-  }
-  &::after { 
-    content: "⬇️"; display:block; transition:0.3s;
-    position:absolute; inset-inline-end:0.5rem; inset-block-start:0.5rem;
-    pointer-events:none; font-size:2rem; margin:auto; }
-}
-
-
-
-
-
-html{ display:flex; background-color:#ededed; }
-body{ margin:auto; font-family:arial; }
-h2{font-size:1.5rem; font-weight:bold; margin-top:2em; margin-bottom:0.5em;}
