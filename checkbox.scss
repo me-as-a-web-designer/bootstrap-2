@@ -4,10 +4,10 @@ body { border:20px solid red; }
 
 html {
    font-size:31.25%; 
-   /* every 1rem eqal 5px */
 }
 
-.custom-checkbox { width:25rem;
+.custom-checkbox { 
+   width:25rem;
    height:25rem;
    transition:0.3s;
 }
