@@ -11,7 +11,7 @@ html { font-size:31.25%; }
 }
 
 
-#layers:checked ~ .custom-checkbox{
+#layers:checked ~ .custom-checkbox {
   all:unset;
   position:relative; 
   display:block; 
@@ -22,7 +22,7 @@ html { font-size:31.25%; }
   border-radius:10rem; 
   background-color:rgb(var(--mistyRose));
   transition:0.2s;
-  &::before{
+  &::before {
     content:""; 
     display:block; 
     box-sizing:border-box; 
@@ -33,14 +33,14 @@ html { font-size:31.25%; }
     border:solid 4rem rgb(var(--white)); 
     background-color:rgb(var(--rouge));
   }
-  &:checked{
+  &:checked {
     background-color:rgb(var(--azureishWhite));
-    &::before{
+    &::before {
       background-color:rgb(var(--caribbeanGreen)); 
       transform:translateX(18rem);}
   }
   &:hover, 
-  &:focus{
+  &:focus {
     &:not(:disabled){
       outline:none; 
       box-shadow:0 0 1px #fff, 0 0 3px #fff, 0 0 6px #0ba9ca; 
@@ -50,7 +50,7 @@ html { font-size:31.25%; }
 }
 
 
-:root{
+:root {
     --white: 255, 255, 255; /* #ffffff*/
     --mistyRose: 255, 232, 232; /* #FFE8E8 */
     --rouge: 255, 42, 43; /* #FF2A2B */
@@ -58,8 +58,8 @@ html { font-size:31.25%; }
     --caribbeanGreen: 15, 202, 128; /* #0FCA80 */
 }
 
-html{font-family:arial; background-color:#ddd;}
-body{
+html { font-family:arial; background-color:#ddd;}
+body {
   display:flex; 
   flex-direction:column; 
   align-items:center; 
@@ -72,7 +72,7 @@ body{
 
 
 /* remove/show checkbox with styled yellow label */
-input#layers{
+input#layers {
   position:fixed; top:20px; left:15px; z-index:11;
   display:block; padding:5px; border:solid 1px rgb(136 136 136 / 0.7); border-radius:4px;
   background-color:rgb(255 221 64 / 0.8);
@@ -80,7 +80,7 @@ input#layers{
   &:checked ~ label::before{content:attr(data-checked);}
   &:not(:checked) ~ label::before{content:attr(data-unchecked);}
 }
-label{
+label {
   position:fixed; z-index:10; left:10px; top:10px;
   display:block; padding:10px; padding-left:30px; border-radius:4px;
   background-color:rgb(255 221 64 / 0.8); font-size:3.5rem;
