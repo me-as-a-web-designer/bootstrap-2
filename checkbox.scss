@@ -10,13 +10,6 @@ html { font-size:31.25%; }
   transition:0.3s;
 }
 
-:root {
-    --white: 255, 255, 255; /* #ffffff*/
-    --mistyRose: 255, 232, 232; /* #FFE8E8 */
-    --rouge: 255, 42, 43; /* #FF2A2B */
-    --azureishWhite: 223, 247, 237; /* #DFF7ED */
-    --caribbeanGreen: 15, 202, 128; /* #0FCA80 */
-}
 
 
 #layers:checked ~ .custom-checkbox {
@@ -28,7 +21,7 @@ html { font-size:31.25%; }
   height:20rem; 
   padding:2rem;
   border-radius:10rem; 
-  background-color:rgb(var(--mistyRose));
+  background-color:orange;
   transition:0.2s;
   &::before {
     content:""; 
@@ -38,13 +31,13 @@ html { font-size:31.25%; }
     width:16rem; 
     height:16rem; 
     border-radius:50%;
-    border:solid 4rem rgb(var(--white)); 
-    background-color:rgb(var(--rouge));
+    border:solid 4rem green ; 
+    background-color:pink;
   }
   &:checked {
-    background-color:rgb(var(--azureishWhite));
+    background-color:blue;
     &::before {
-      background-color:rgb(var(--caribbeanGreen)); 
+      background-color:red; 
       transform:translateX(18rem);}
   }
   &:hover, 
